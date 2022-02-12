@@ -19,7 +19,11 @@ const initialState = [
 
 const contactReducer = (state = initialState, action) => {
     switch(action.type) {
-        default: return state 
+        case "ADD_CONTACT": 
+        state = [...state, action.payload]
+        return state
+        default: 
+        return state 
     }
 }
 
